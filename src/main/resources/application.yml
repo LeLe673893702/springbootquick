@@ -1,8 +1,9 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/study
-    username: root
-    password: 1234
+    url: ${url}
+    username: ${user}
+    password: ${password}
     driver-class-name: com.mysql.jdbc.Driver
+    type: org.apache.ibatis.datasource.pooled.PooledDataSource
 mybatis:
   mapper-locations: classpath:dao/*.xml

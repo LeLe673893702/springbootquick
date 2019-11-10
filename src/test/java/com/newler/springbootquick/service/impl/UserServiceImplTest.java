@@ -2,6 +2,7 @@ package com.newler.springbootquick.service.impl;
 
 import com.newler.springbootquick.SpringBootQuickApplication;
 import com.newler.springbootquick.service.UserService;
+import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -29,6 +30,6 @@ class UserServiceImplTest {
 
     @Test
     void getUser() {
-        System.out.println(userService.getUser(1));
+        Assert.assertNotNull(userService.getUser(1));
     }
 }
